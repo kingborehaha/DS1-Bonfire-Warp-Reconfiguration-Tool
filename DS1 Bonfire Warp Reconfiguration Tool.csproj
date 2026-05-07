@@ -32,9 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Paramdex\**">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Resources\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

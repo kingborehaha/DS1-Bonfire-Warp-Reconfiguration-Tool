@@ -28,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BoreSoulsResource\BoreSoulsResource\BoreSoulsResource.csproj" />
     <ProjectReference Include="..\BoreSoulsResource\SoulsFormats\SoulsFormats.csproj" />
   </ItemGroup>
 

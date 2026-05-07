@@ -1,0 +1,3 @@
+// ID below is used for event FMG entries (one text entry per warpable bonfire)
+// Default: 1500
+1500

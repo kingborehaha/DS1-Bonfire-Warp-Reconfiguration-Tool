@@ -1,0 +1,48 @@
+// Warp Unlock ID, Always Unlocked, Bonfire Entity ID, Name
+// Warp Unlock ID should be kept consistent between mod updates to prevent players with old saves having incorrect bonfires unlocked after updating.
+// Listed order will be the order in the warp menu
+0, TRUE, 1021960, Firelink Shrine
+1, FALSE, 1011962, Undead Burg
+2, FALSE, 1011964, Undead Parish
+3, FALSE, 1011961, Sunlight Altar
+4, FALSE, 1001960, Depths
+5, FALSE, 1201961, Darkroot Garden
+6, FALSE, 1601961, Darkroot Basin
+7, FALSE, 1801960, Firelink Altar
+8, FALSE, 1211963, Sanctuary Garden
+9, FALSE, 1211950, Chasm of the Abyss
+10, FALSE, 1211961, Oolacile Sanctuary
+11, FALSE, 1211962, Oolacile Township
+12, FALSE, 1211964, Oolacile Township Dungeon
+13, FALSE, 1301960, The Catacombs
+14, FALSE, 1301961, Hidden Waterfall Chamber
+15, FALSE, 1301962, Blacksmith Vamos
+16, FALSE, 1311961, Tomb of the Giants
+17, FALSE, 1311960, Depths of the Tomb
+18, FALSE, 1311950, Altar of the Gravelord
+19, FALSE, 1401962, Blighttown
+20, FALSE, 1401961, Blighttown Swamp
+21, FALSE, 1401960, Daughter of Chaos
+22, FALSE, 1411961, Demon Ruins Overlook
+23, FALSE, 1411962, Demon Ruins
+24, FALSE, 1411963, Demon Ruins Depths
+25, FALSE, 1411964, Lost Izalith Approach
+26, FALSE, 1411960, Izalith Sanctuary
+27, FALSE, 1411950, Bed of Chaos
+28, FALSE, 1501961, Sen's Fortress
+29, FALSE, 1511960, Anor Londo
+30, FALSE, 1511961, Abandoned Anteroom
+31, FALSE, 1511962, Darkmoon Tomb
+32, FALSE, 1511950, Chamber of the Princess
+33, FALSE, 1701962, Entrance to the Archives
+34, FALSE, 1701960, The Duke's Archives
+35, FALSE, 1701961, Duke's Archive Tower
+36, FALSE, 1701950, Crystal Cave
+37, FALSE, 1101960, Painted World of Ariamis
+38, FALSE, 1321962, The Great Hollow
+39, FALSE, 1321961, Ash Lake
+40, FALSE, 1321960, Stone Dragon
+41, FALSE, 1601950, The Abyss
+42, FALSE, 1811960, Northern Undead Asylum
+43, FALSE, 1811961, Asylum Side Passage
+//199, false, 1231234, Disabled Bonfire // Won't appear in the warp menu since line is commented out.

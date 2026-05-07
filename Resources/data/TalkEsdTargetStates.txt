@@ -1,0 +1,5 @@
+// Determines state IDs targeted in the bonfire warp donor ESD (t550055.esd) as well as state IDs in bonfire talkESD already modified by this tool.
+// Don't change unless you know what you're doing. Target states must be above 999.
+// Menu prompts, Set warp flag template, prompt result + set warp flag (+1 for every bonfire), prepare for warp, bonfire rest interrupted, left bonfire
+// Warning: if these are changed after running the tool on any ESD, those ESD will not be able to update properly.
+3000, 3250, 3300, 3150, 3350, 3360

@@ -1,0 +1,7 @@
+// ID below is used as a base for event flags and event IDs. Use non temporary flag IDs (NOT ending with 5000+)
+// ID + 0-199: reserved for "Bonfire unlocked" flags
+// ID + 200-399: reserved for "Bonfire Warp requested" flags
+// ID + 400-401: common event IDs for bonfire warp management
+// ID + 450: dummy "Bonfre Unlocked" flag for all unwarpable bonfires (this does nothing except simplify how the tool works)
+// Default: 71020000
+71020000

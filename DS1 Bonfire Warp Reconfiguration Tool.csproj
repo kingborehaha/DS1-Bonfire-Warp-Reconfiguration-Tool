@@ -57,9 +57,6 @@
     <None Update="Resources\data\donor.emevd.dcx.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\data\esdtoolconfig.json">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

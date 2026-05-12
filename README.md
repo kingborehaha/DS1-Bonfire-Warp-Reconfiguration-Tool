@@ -2,7 +2,9 @@
 
 ![BonfireWarpTxt.png](BonfireWarpTxt.png)
 
-This program dynamically modifies game files to let you customize warpable bonfires through a single .txt file. The vanilla warp system is almost entirely replaced, and functions nearly identically.
+This program directly modifies game files to let you customize which bonfires are warpable and other details through a single .txt file. The vanilla warp system is almost entirely replaced, and functions nearly identically.
+
+This is meant to be a modders resource and (hopefully) compatible with practically any assortment of non-vanilla game files.
 
 Compatible with Dark Souls PTDE and Dark Souls Remastered.
 

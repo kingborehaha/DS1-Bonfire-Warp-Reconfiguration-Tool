@@ -479,7 +479,7 @@ namespace SoulsModInstaller
             foreach (var path in Directory.GetFiles(msgbndDir, "*.msgbnd" + dcxExt, SearchOption.AllDirectories))
             {
                 bool modified = false;
-                var localPath = path.Replace(gameDir, "");
+                var localPath = "msg\\" + path.Split("msg\\").Last();
                 var bnd = BND3.Read(path);
                 foreach (var f in bnd.Files)
                 {

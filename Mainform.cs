@@ -321,6 +321,15 @@ namespace SoulsModInstaller
 
                                 //var bonfireFlag = (int)args[0]; // This isn't actually set when bonfire is lit. No idea what it does. Scared to mess with it.
                                 var entityId = (int)args[1];
+
+                                if (entityId <= 0)
+                                {
+                                    // This is likely because of event parameters. Does not happen in vanilla, but a mod might.
+                                    // Todo: could probably just figure out how to read event parameters.
+                                    Log.AddLog($"{mapName} emevd contains RegisterBonfire() with unreadable EntityID, and was skipped.");
+                                    continue;
+                                }
+
                                 bonfireInfos.TryAdd(entityId, new(mapName, entityId, unlockFlagRangeStart, nextWarpFlag++));
                             }
                         }
@@ -527,13 +536,14 @@ namespace SoulsModInstaller
             // ESD
 
             var donor = ESD.Read($@"{UtilFile.GetWorkingDirectory()}\resources\data\t550055.esd");
-            var targetStatesTxt = UtilFile.LoadLocalTextResource(@"resources\data\TalkEsdTargetStates.txt", 6)[0];
+            var targetStatesTxt = UtilFile.LoadLocalTextResource(@"resources\data\TalkEsdTargetStates.txt", 7)[0];
             long promptMenuStateId = long.Parse(targetStatesTxt[0]);
             long setFlagTemplateStateId = long.Parse(targetStatesTxt[1]);
-            long resultStateId = long.Parse(targetStatesTxt[2]);
+            long oldResultStateIdStart = long.Parse(targetStatesTxt[2]);
             long postWarpSetFlagStateId = long.Parse(targetStatesTxt[3]);
             long bonfireInterruptedStateId = long.Parse(targetStatesTxt[4]);
             long leftBonfireStateId = long.Parse(targetStatesTxt[5]);
+            long resultStateIdStart = long.Parse(targetStatesTxt[6]);
 
             var states = donor.StateGroups.First().Value;
             var promptMenuState = states[promptMenuStateId];
@@ -543,7 +553,7 @@ namespace SoulsModInstaller
             int nextPromptSlot = 10;
             var promptSetFlagState = states[setFlagTemplateStateId];
             var setFlagCmdBase = promptSetFlagState.EntryCommands[0];
-            long nextResultStateId = resultStateId;
+            long nextResultStateId = resultStateIdStart;
 
             foreach (var b in warpableBonfires)
             {
@@ -628,7 +638,11 @@ namespace SoulsModInstaller
                             CheckAndRemoveOldStates(setFlagTemplateStateId);
                             for (var i = 0; i <= WarpNumMax; i++)
                             {
-                                CheckAndRemoveOldStates(resultStateId + i);
+                                CheckAndRemoveOldStates(resultStateIdStart + i);
+                            }
+                            for (var i = 0; i <= WarpNumMax; i++)
+                            {
+                                CheckAndRemoveOldStates(oldResultStateIdStart + i);
                             }
                             CheckAndRemoveOldStates(postWarpSetFlagStateId);
                             CheckAndRemoveOldStates(bonfireInterruptedStateId);
